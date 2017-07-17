@@ -1,0 +1,23 @@
+<div class="list-group-item">
+  <div class="list-group-item-heading">
+    <div class="pull-right">
+       <button type="button" class="close" aria-label="Close" (click)="closeUserDetailed()">
+      <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <img src="{{userTweets[0].getImageURL()}}" alt="{{userTweets[0].getUser()}}" class="img-responsive center-block" style="max-height: 120px">
+  </div>
+  <div class="row">
+    <h3 class="text-center">{{userTweets[0].getUser()}}</h3>
+  </div>
+</div>
+<div *ngFor="let tweet of userTweets">
+  <div class="list-group-item"> {{tweet.getContent()}}
+    <hr>
+      {{tweet.getDate()}}
+  </div>
+</div>
+
+
+
+
