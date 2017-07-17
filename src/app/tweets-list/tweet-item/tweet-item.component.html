@@ -1,0 +1,9 @@
+<a class="list-group-item clearfix" (click)="showTweetInfo()">
+  <div class="pull-left">
+    <img [src]="tweet.getImageURL()" [alt]="tweet.getUser()" class="img-responsive" style="max-height: 50px;">
+  </div>
+  <div class="pull-left" style="margin-left: 20px">
+    <h4 class="list-group-item-heading" style="cursor: pointer" (click)="getTweetsForUser()">{{tweet.getUser()}}</h4>
+    <p class="list-group-item-text">{{tweet.getContent()}}</p>
+  </div>
+</a>
